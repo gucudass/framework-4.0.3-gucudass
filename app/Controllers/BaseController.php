@@ -19,64 +19,27 @@ use CodeIgniter\Controller;
 class BaseController extends Controller
 {
 
-	/**
-	 * An array of helpers to be loaded automatically upon
-	 * class instantiation. These helpers will be available
-	 * to all other controllers that extend BaseController.
-	 *
-	 * @var array
-	 */
-	protected $helpers = [];
+    /**
+     * An array of helpers to be loaded automatically upon
+     * class instantiation. These helpers will be available
+     * to all other controllers that extend BaseController.
+     *
+     * @var array
+     */
+    protected $helpers = [];
 
-    protected $aSessUser = [];
-
-	/**
-	 * Constructor.
-	 */
-	public function initController(\CodeIgniter\HTTP\RequestInterface $request, \CodeIgniter\HTTP\ResponseInterface $response, \Psr\Log\LoggerInterface $logger)
-	{
-		// Do Not Edit This Line
-		parent::initController($request, $response, $logger);
-
-		//--------------------------------------------------------------------
-		// Preload any models, libraries, etc, here.
-		//--------------------------------------------------------------------
-		// E.g.:
-		// $this->session = \Config\Services::session();
-
-        $this->initSession();
-	}
-
-    private function initSession()
+    /**
+     * Constructor.
+     */
+    public function initController(\CodeIgniter\HTTP\RequestInterface $request, \CodeIgniter\HTTP\ResponseInterface $response, \Psr\Log\LoggerInterface $logger)
     {
-        $sUri = $_SERVER['REQUEST_URI'];
+        // Do Not Edit This Line
+        parent::initController($request, $response, $logger);
 
-        $aUriPass = [
-            '/sign/in',
-            '/sign/actIn'
-        ];
-
-        $this->aSessUser = session()->get();
-
-        if (in_array($sUri, $aUriPass) === false && $this->isAuthSession() === false) {
-            $this->setLocation('/sign/in');
-        }
+        //--------------------------------------------------------------------
+        // Preload any models, libraries, etc, here.
+        //--------------------------------------------------------------------
+        // E.g.:
+        // $this->session = \Config\Services::session();
     }
-
-    private function isAuthSession()
-    {
-        if (empty($this->aSessUser['sess_id']) === false) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    protected function setLocation($sURL)
-    {
-//        $sURL = '/admin' . $sURL;
-        header('Location: ' . $sURL);
-        exit;
-    }
-
 }
