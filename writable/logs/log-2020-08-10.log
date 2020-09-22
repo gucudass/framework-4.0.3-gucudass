@@ -1,0 +1,55 @@
+CRITICAL - 2020-08-10 02:25:15 --> Call to undefined function App\Controllers\Admin\array_key_pivot()
+#0 /Users/gudals/Dev/equip/system/CodeIgniter.php(914): App\Controllers\Admin\Task->index()
+#1 /Users/gudals/Dev/equip/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Task))
+#2 /Users/gudals/Dev/equip/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /Users/gudals/Dev/equip/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /Users/gudals/Dev/equip/system/Commands/Server/rewrite.php(34): require_once('/Users/gudals/D...')
+#5 {main}
+CRITICAL - 2020-08-10 06:51:50 --> 이미 장비 할당이 되었습니다. 사용 현황을 확인하세요.
+#0 /Users/gudals/Dev/equip/app/Controllers/Admin/Equip.php(112): App\Controllers\CommController->unAuthorizedAjax('\xEC\x9D\xB4\xEB\xAF\xB8 \xEC\x9E\xA5\xEB\xB9\x84 \xED...')
+#1 /Users/gudals/Dev/equip/system/CodeIgniter.php(914): App\Controllers\Admin\Equip->setEquipTasked()
+#2 /Users/gudals/Dev/equip/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Equip))
+#3 /Users/gudals/Dev/equip/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/gudals/Dev/equip/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /Users/gudals/Dev/equip/system/Commands/Server/rewrite.php(34): require_once('/Users/gudals/D...')
+#6 {main}
+CRITICAL - 2020-08-10 06:56:17 --> Undefined index: eq_code
+#0 /Users/gudals/Dev/equip/app/Views/admin/task.php(85): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/Users/gudals/D...', 85, Array)
+#1 /Users/gudals/Dev/equip/system/View/View.php(246): include('/Users/gudals/D...')
+#2 /Users/gudals/Dev/equip/system/Common.php(1087): CodeIgniter\View\View->render('admin/task', Array, true)
+#3 /Users/gudals/Dev/equip/app/Controllers/CommController.php(117): view('admin/task', Array)
+#4 /Users/gudals/Dev/equip/app/Controllers/Admin/Task.php(35): App\Controllers\CommController->display('admin/task', Array)
+#5 /Users/gudals/Dev/equip/system/CodeIgniter.php(914): App\Controllers\Admin\Task->index()
+#6 /Users/gudals/Dev/equip/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Task))
+#7 /Users/gudals/Dev/equip/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/gudals/Dev/equip/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 /Users/gudals/Dev/equip/system/Commands/Server/rewrite.php(34): require_once('/Users/gudals/D...')
+#10 {main}
+CRITICAL - 2020-08-10 07:04:37 --> Column 'comp_no' in where clause is ambiguous
+#0 /Users/gudals/Dev/equip/system/Database/MySQLi/Connection.php(331): mysqli->query('SELECT `eq_task...')
+#1 /Users/gudals/Dev/equip/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `eq_task...')
+#2 /Users/gudals/Dev/equip/system/Database/BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `eq_task...')
+#3 /Users/gudals/Dev/equip/system/Database/BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `eq_task...', Array, false)
+#4 /Users/gudals/Dev/equip/app/Models/TaskModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/gudals/Dev/equip/app/Controllers/Admin/Task.php(18): App\Models\TaskModel->getTaskList(Array)
+#6 /Users/gudals/Dev/equip/system/CodeIgniter.php(914): App\Controllers\Admin\Task->index()
+#7 /Users/gudals/Dev/equip/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Task))
+#8 /Users/gudals/Dev/equip/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/gudals/Dev/equip/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#10 /Users/gudals/Dev/equip/system/Commands/Server/rewrite.php(34): require_once('/Users/gudals/D...')
+#11 {main}
+CRITICAL - 2020-08-10 07:06:14 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '*) as cnt
+FROM `eq_task`
+LEFT JOIN `eq_equip` AS `ee` ON `ee`.`eq_no` = `eq_task' at line 1
+#0 /Users/gudals/Dev/equip/system/Database/MySQLi/Connection.php(331): mysqli->query('SELECT count(eq...')
+#1 /Users/gudals/Dev/equip/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT count(eq...')
+#2 /Users/gudals/Dev/equip/system/Database/BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT count(eq...')
+#3 /Users/gudals/Dev/equip/system/Database/BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT count(eq...', Array, false)
+#4 /Users/gudals/Dev/equip/app/Models/TaskModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/gudals/Dev/equip/app/Controllers/Admin/Task.php(16): App\Models\TaskModel->getTaskTotal(Array)
+#6 /Users/gudals/Dev/equip/system/CodeIgniter.php(914): App\Controllers\Admin\Task->index()
+#7 /Users/gudals/Dev/equip/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Task))
+#8 /Users/gudals/Dev/equip/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/gudals/Dev/equip/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#10 /Users/gudals/Dev/equip/system/Commands/Server/rewrite.php(34): require_once('/Users/gudals/D...')
+#11 {main}

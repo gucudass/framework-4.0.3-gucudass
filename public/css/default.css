@@ -1,0 +1,63 @@
+body {
+    font-size: .875rem;
+}
+
+.bd-example-modal-lg .modal-dialog{
+    display: table;
+    position: relative;
+    margin: 0 auto;
+    top: calc(50% - 24px);
+}
+
+.bd-example-modal-lg .modal-dialog .modal-content{
+    background-color: transparent;
+    border: none;
+}
+
+/* 별점 */
+.star_rating {font-size:0; letter-spacing:-4px;}
+.star_rating span {
+    font-size:14px;
+    letter-spacing:0;
+    display:inline-block;
+    margin-left:1px;
+    color:#ccc;
+    text-decoration:none;
+}
+.star_rating span:first-child {margin-left:0;}
+.star_rating span.on {color:#777;}
+.star_rating span.text { color:#999; }
+/* //별점 */
+
+.text_required:after { content:"*";color:red; }
+
+.material-icons { vertical-align: middle }
+
+.input-xs {
+    height: 22px;
+    padding: 2px 5px;
+    font-size: 12px;
+    line-height: 1.5; /* If Placeholder of the input is moved up, rem/modify this. */
+    border-radius: 3px;
+}
+
+.btn-group-xs > .btn, .btn-xs {
+    padding: .5rem .4rem;
+    font-size: .8rem;
+    line-height: .4;
+    border-radius: .2rem;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.hr-style { padding:0; }
+
+.wpx-80 { width:80px !important; }
+.wpx-100 { width:100px !important; }
+.wpx-120 { width:120px !important; }
+.wpx-150 { width:150px !important; }
+.wpx-180 { width:180px !important; }
