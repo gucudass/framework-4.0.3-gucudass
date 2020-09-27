@@ -2,6 +2,8 @@
 
 class Sc
 {
+    const TITLE = 'EQ';
+
     const aCompType = [
 
     ];

@@ -33,7 +33,7 @@ $sUriKey = implode('_', $aPath);
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="/css/default.css">
-    <title>EQ</title>
+    <title><?= \App\Libraries\Sc::TITLE; ?></title>
 </head>
 <body>
 
